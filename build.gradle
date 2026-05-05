@@ -1,13 +1,13 @@
-// Bu blok Gradle Plugin'lerini tanımlar
 buildscript {
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"
+        // Gradle 9 ile uyum için AGP sürümünü 8.4.0 veya üzerine çekiyoruz
+        classpath 'com.android.tools.build:gradle:8.4.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20"
     }
 }
 
-// Buradaki 'allprojects' veya 'subprojects' bloklarını tamamen siliyoruz
+// Boş bırakıldı, depolar settings.gradle içinde
