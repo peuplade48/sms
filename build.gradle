@@ -1,15 +1,13 @@
+// Bu blok Gradle Plugin'lerini tanımlar
 buildscript {
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        // Android Gradle Plugin sürümü
         classpath 'com.android.tools.build:gradle:8.2.0'
-        // Kotlin sürümü
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"
     }
 }
 
-// Hata veren 'allprojects' deposu buradan kaldırıldı, 
-// çünkü settings.gradle üzerinden yönetiliyor.
+// Buradaki 'allprojects' veya 'subprojects' bloklarını tamamen siliyoruz
