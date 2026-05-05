@@ -4,10 +4,14 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        // Gradle 8.7 ile tam uyumlu Android Plugin sürümü
-        classpath 'com.android.tools.build:gradle:8.3.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
+        // En az 7.0 veya üzeri bir sürüm olduğundan emin olun
+        classpath 'com.android.tools.build:gradle:8.3.2' 
     }
 }
 
-// Depo tanımları settings.gradle içinde olduğu için burası boş bırakıldı
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
