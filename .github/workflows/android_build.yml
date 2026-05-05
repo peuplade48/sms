@@ -23,6 +23,7 @@ jobs:
       with:
         # Properties dosyasındaki 8.7 sürümünü zorunlu kılar
         gradle-version: wrapper
+        cache-disabled: true # Geçici olarak cache'i kapatıp temiz bir build alın
 
     - name: Grant execute permission
       run: chmod +x gradlew
