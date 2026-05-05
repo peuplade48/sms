@@ -4,10 +4,10 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        // Gradle 9 ile uyum için AGP sürümünü 8.4.0 veya üzerine çekiyoruz
-        classpath 'com.android.tools.build:gradle:8.4.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20"
+        // Gradle 8.7 ile tam uyumlu Android Plugin sürümü
+        classpath 'com.android.tools.build:gradle:8.3.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
     }
 }
 
-// Boş bırakıldı, depolar settings.gradle içinde
+// Depo tanımları settings.gradle içinde olduğu için burası boş bırakıldı
