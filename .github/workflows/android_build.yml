@@ -18,18 +18,18 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v3
-      with:
-        # Properties dosyasındaki 8.7 sürümünü zorunlu kılar
-        gradle-version: wrapper
-        cache-disabled: true # Geçici olarak cache'i kapatıp temiz bir build alın
-
     - name: Grant execute permission
       run: chmod +x gradlew
 
-    - name: Build APK
-      run: ./gradlew assembleDebug --stacktrace
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: wrapper
+        cache-disabled: true
+
+    - name: Build APK (Single Step)
+      # Tüm parametreleri tek bir komutta topluyoruz
+      run: ./gradlew clean assembleDebug --no-daemon -Pandroid.useAndroidX=true -Pandroid.enableJetifier=true --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
