@@ -4,14 +4,12 @@ buildscript {
         mavenCentral()
     }
     dependencies {
+        // Android Gradle Plugin sürümü
         classpath 'com.android.tools.build:gradle:8.2.0'
+        // Kotlin sürümü
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+// Hata veren 'allprojects' deposu buradan kaldırıldı, 
+// çünkü settings.gradle üzerinden yönetiliyor.
