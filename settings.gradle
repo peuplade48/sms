@@ -6,11 +6,13 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
+    // Proje içi build.gradle dosyalarında repo tanımlanmasını yasaklar (Hatayı çözen kısım budur)
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
     }
 }
+
 rootProject.name = "SMSSender48"
 include ':app'
