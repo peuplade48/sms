@@ -22,7 +22,7 @@ jobs:
       uses: gradle/actions/setup-gradle@v3
 
     - name: Build APK
-      # ./gradlew yerine doğrudan 'gradle' kullanarak depondaki dosya hatalarını bypass ediyoruz
+      # gradlew dosyası bozuk olsa bile sistemdeki gradle ile derler
       run: gradle assembleDebug --stacktrace
 
     - name: Upload APK
