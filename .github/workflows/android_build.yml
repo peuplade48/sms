@@ -20,10 +20,15 @@ jobs:
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
+      with:
+        # Properties dosyasındaki 8.7 sürümünü zorunlu kılar
+        gradle-version: wrapper
+
+    - name: Grant execute permission
+      run: chmod +x gradlew
 
     - name: Build APK
-      # gradlew dosyası bozuk olsa bile sistemdeki gradle ile derler
-      run: gradle assembleDebug --stacktrace
+      run: ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
